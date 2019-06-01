@@ -27,3 +27,12 @@ How to Kirk: Shows you different resources like articles, tutorial videos, docum
 <img src="https://user-images.githubusercontent.com/30645560/58753790-3ae5c200-848a-11e9-9e15-58902a3985c0.png" width="350" height="450"/>
 
 <img src="https://user-images.githubusercontent.com/30645560/58753951-150dec80-848d-11e9-8c0a-6090e1df2a8b.png" width="350" height="450"/>
+
+<img src="https://user-images.githubusercontent.com/30645560/58754110-6fa84800-848f-11e9-8eda-5079b20f0ecf.png" width="350" height="450"/>
+
+<img src="https://user-images.githubusercontent.com/30645560/58754111-71720b80-848f-11e9-9e94-b74eb032b575.png" width="350" height="450"/>
+
+<img src="https://user-images.githubusercontent.com/30645560/58754112-73d46580-848f-11e9-96da-c6b2d9362ab5.png" width="350" height="450"/>
+
+
+
