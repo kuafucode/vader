@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:vader/src/vaderkirk_appbar.dart';
 import 'package:flutter_hsvcolor_picker/flutter_hsvcolor_picker.dart';
+import 'package:vader/src/flatbutton_widget.dart';
 
 class ButtonTool extends StatefulWidget {
   @override
@@ -24,6 +25,15 @@ class _ButtonToolState extends State<ButtonTool> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: createVaderKirkAppBar(),
+        bottomNavigationBar: BottomAppBar(
+          child: RaisedButton(
+            onPressed: (){Navigator.push(context, MaterialPageRoute(builder:(context)=> FlatbuttonWidget(''), settings: RouteSettings(name: 'lib')));},
+            child: Text(
+                'View Source',
+                style: TextStyle(fontSize: 20)
+            ),
+          ),
+        ),
         body: Container(
           height: MediaQuery.of(context).size.height,
           child: Column(

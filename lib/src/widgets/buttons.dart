@@ -1,24 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:vader/src/flatbutton_widget.dart';
+import 'package:vader/src/button_tool.dart';
+import 'package:vader/src/vaderkirk_appbar.dart';
 
 class Buttons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          centerTitle: false,
-          title: Column(
-            children: <Widget>[
-              Text("VanderKirk",style: TextStyle(fontSize: 18.0)),
-              Text("A help tool for Flutter",style: TextStyle(fontSize: 11.0,))
-            ],
-          ),
-          actions: <Widget>[
-            Row(mainAxisAlignment: MainAxisAlignment.center,children: <Widget>[
-              Icon(Icons.code),
-              Text("Flutter")
-          ])]
-        ),
+        appBar: createVaderKirkAppBar(),
         body: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.all(8.0),
@@ -64,7 +52,7 @@ class Buttons extends StatelessWidget {
                       scrollDirection: Axis.horizontal,
                       children: <Widget>[
 
-                        WidgetCard(text: 'Flat Button', nav: MaterialPageRoute(builder:(context)=> FlatbuttonWidget('a'), settings: RouteSettings(name: 'flatbutton'))),
+                        WidgetCard(text: 'Flat Button', nav: MaterialPageRoute(builder:(context)=> ButtonTool(), settings: RouteSettings(name: 'flatbutton'))),
                       WidgetCard(text: 'Raised Button'),
                       WidgetCard(text: 'FloatingActionButton'),
                       WidgetCard(text: 'IconButton'),
