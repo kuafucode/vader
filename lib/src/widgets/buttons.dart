@@ -64,11 +64,12 @@ class Buttons extends StatelessWidget {
                       scrollDirection: Axis.horizontal,
                       children: <Widget>[
 
-                      WidgetCard(text: 'App Structure and navigation'),
-                      WidgetCard(text: 'Flat Button', nav: MaterialPageRoute(builder:(context)=> FlatbuttonWidget('a'), settings: RouteSettings(name: 'flatbutton'))),
-                      WidgetCard(text: 'Input and selections'),
-                      WidgetCard(text: 'Dialogs and panels'),
-                      WidgetCard(text: 'Information Displays'),
+                        WidgetCard(text: 'Flat Button', nav: MaterialPageRoute(builder:(context)=> FlatbuttonWidget('a'), settings: RouteSettings(name: 'flatbutton'))),
+                      WidgetCard(text: 'Raised Button'),
+                      WidgetCard(text: 'FloatingActionButton'),
+                      WidgetCard(text: 'IconButton'),
+                      WidgetCard(text: 'DropdownButton'),
+                        WidgetCard(text: 'PopupMenuButton'),
                       ],
                     ),
                   ),
