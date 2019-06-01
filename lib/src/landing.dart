@@ -1,6 +1,7 @@
 // landing page with app intro
 
 import 'package:flutter/material.dart';
+import 'package:vader/src/widget_library.dart';
 
 class Landing extends StatelessWidget {
   Landing({Key key}) : super(key: key);
@@ -76,7 +77,7 @@ class Landing extends StatelessWidget {
                     ),
                     onTap: () {
                       // go to vader
-                      print('vader');
+                      Navigator.push(context, MaterialPageRoute(builder:(context)=> WidgetLibrary(), settings: RouteSettings(name: 'lib')));
                     },
                   ),
                   decoration: BoxDecoration(
