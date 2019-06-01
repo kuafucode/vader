@@ -94,14 +94,14 @@ class Landing extends StatelessWidget {
                           Row(
                             children: <Widget>[
                               Text(
-                                'Vader Theme',
+                                'How to Kirk',
                                 style: TextStyle(
                                     fontSize: 30, color: Colors.white),
                               ),
                               Padding(
                                 padding: EdgeInsets.only(left: 30, bottom: 30),
                                 child: Image.asset(
-                                  'assets/images/vaderrrr.png',
+                                  'assets/images/fleet.png',
                                   width: 60,
                                 ),
                               ),
@@ -121,7 +121,7 @@ class Landing extends StatelessWidget {
                     },
                   ),
                   decoration: BoxDecoration(
-                      color: Colors.grey,
+                      color: Colors.orange[300],
                       borderRadius: BorderRadius.circular(15.0)),
                 ),
               )
