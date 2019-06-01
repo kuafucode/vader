@@ -13,55 +13,121 @@ class Landing extends StatelessWidget {
           children: <Widget>[
             Text(
               'VaderKirk',
-              style: TextStyle(fontSize: 16),
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             Text(
               'A Help Tool for Flutter',
-              style: TextStyle(fontSize: 10),
+              style: TextStyle(fontSize: 16),
             ),
           ],
           crossAxisAlignment: CrossAxisAlignment.start,
         ),
         actions: <Widget>[
           Row(
-            children: <Widget>[FlutterLogo(), Text('Flutter')],
+            children: <Widget>[
+              FlutterLogo(
+                size: 32,
+              ),
+              Text('Flutter', style: TextStyle(fontSize: 18))
+            ],
           ),
         ],
       ),
       body: Center(
-        child: Padding(padding: EdgeInsets.all(20),child: Column(
-          children: <Widget>[
-            Text('Get widget and community resource help to kickstart '
-                ' your Flutter project faster than a lightsabre launch.',
-                style: TextStyle(fontSize: 20)),
-
-          Padding(padding: EdgeInsets.all(20)),
-
-            Card(
-              child: Container(
-                child: InkWell(child: Padding(padding: EdgeInsets.all(20), child: Column(
-                  children: <Widget>[
-                    Text('Vader Theme', style: TextStyle(fontSize: 40, color: Colors.white),),
-                    Text(
-                        'Quickly customize your flutter widget to match your design vision',
-                      style: TextStyle(fontSize: 20, color: Colors.white),
+        child: Padding(
+          padding: EdgeInsets.all(20),
+          child: Column(
+            children: <Widget>[
+              Text(
+                  'Get widget and community resource help to kickstart '
+                  ' your Flutter project faster than a lightsabre launch.',
+                  style: TextStyle(fontSize: 20)),
+              Padding(padding: EdgeInsets.all(20)),
+              Card(
+                child: Container(
+                  child: InkWell(
+                    child: Padding(
+                      padding: EdgeInsets.all(20),
+                      child: Column(
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              Text(
+                                'Vader Theme',
+                                style: TextStyle(
+                                    fontSize: 30, color: Colors.white),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(left: 30, bottom: 30),
+                                child: Image.asset(
+                                  'assets/images/vaderrrr.png',
+                                  width: 60,
+                                ),
+                              ),
+                            ],
+                            mainAxisAlignment: MainAxisAlignment.center,
+                          ),
+                          Text(
+                            'Quickly customize your flutter widget to match your design vision',
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                        ],
+                      ),
                     ),
-                  ],
-                ),),
-                onTap: (){
-                  // go to vader
-                  print('vader');
-                },),
-                decoration: BoxDecoration(
-                  color: const Color(0xff7c94b6),
-                  image: DecorationImage(
-                    image: ExactAssetImage('assets/images/vaderrrr.png', scale: 0.02),
+                    onTap: () {
+                      // go to vader
+                      print('vader');
+                    },
                   ),
+                  decoration: BoxDecoration(
+                      color: Colors.grey,
+                      borderRadius: BorderRadius.circular(15.0)),
                 ),
               ),
-            )
-          ],
-        ),),
+              Card(
+                child: Container(
+                  child: InkWell(
+                    child: Padding(
+                      padding: EdgeInsets.all(20),
+                      child: Column(
+                        children: <Widget>[
+                          Row(
+                            children: <Widget>[
+                              Text(
+                                'Vader Theme',
+                                style: TextStyle(
+                                    fontSize: 30, color: Colors.white),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(left: 30, bottom: 30),
+                                child: Image.asset(
+                                  'assets/images/vaderrrr.png',
+                                  width: 60,
+                                ),
+                              ),
+                            ],
+                            mainAxisAlignment: MainAxisAlignment.center,
+                          ),
+                          Text(
+                            'Quickly customize your flutter widget to match your design vision',
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    ),
+                    onTap: () {
+                      // go to vader
+                      print('vader');
+                    },
+                  ),
+                  decoration: BoxDecoration(
+                      color: Colors.grey,
+                      borderRadius: BorderRadius.circular(15.0)),
+                ),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
