@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:vader/src/widget_library.dart';
+import 'package:vader/src/vaderkirk_appbar.dart';
+
 
 class Landing extends StatelessWidget {
   Landing({Key key}) : super(key: key);
@@ -9,31 +11,7 @@ class Landing extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Column(
-          children: <Widget>[
-            Text(
-              'VaderKirk',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-            ),
-            Text(
-              'A Help Tool for Flutter',
-              style: TextStyle(fontSize: 16),
-            ),
-          ],
-          crossAxisAlignment: CrossAxisAlignment.start,
-        ),
-        actions: <Widget>[
-          Row(
-            children: <Widget>[
-              FlutterLogo(
-                size: 32,
-              ),
-              Text('Flutter', style: TextStyle(fontSize: 18))
-            ],
-          ),
-        ],
-      ),
+      appBar: createVaderKirkAppBar(),
       body: Center(
         child: Padding(
           padding: EdgeInsets.all(20),

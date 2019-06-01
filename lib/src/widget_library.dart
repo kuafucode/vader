@@ -1,24 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:vader/src/widgets/buttons.dart';
+import 'package:vader/src/vaderkirk_appbar.dart';
+
 
 class WidgetLibrary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          centerTitle: false,
-          title: Column(
-            children: <Widget>[
-              Text("VanderKirk",style: TextStyle(fontSize: 18.0)),
-              Text("A help tool for Flutter",style: TextStyle(fontSize: 11.0,))
-            ],
-          ),
-          actions: <Widget>[
-            Row(mainAxisAlignment: MainAxisAlignment.center,children: <Widget>[
-              Icon(Icons.code),
-              Text("Flutter")
-          ])]
-        ),
+        appBar: createVaderKirkAppBar(),
         body: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.all(8.0),
