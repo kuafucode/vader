@@ -3,8 +3,8 @@
 // This sample shows adding an action to an [AppBar] that opens a shopping cart.
 
 import 'package:flutter/material.dart';
+import 'package:vader/src/landing.dart';
 
-import 'landing.dart';
 
 void main() => runApp(MyApp());
 
