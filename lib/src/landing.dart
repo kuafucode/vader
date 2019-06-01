@@ -99,10 +99,10 @@ class Landing extends StatelessWidget {
                                     fontSize: 30, color: Colors.white),
                               ),
                               Padding(
-                                padding: EdgeInsets.only(left: 30, bottom: 30),
+                                padding: EdgeInsets.only(left: 40, bottom: 30),
                                 child: Image.asset(
                                   'assets/images/fleet.png',
-                                  width: 60,
+                                  height: 60,
                                 ),
                               ),
                             ],
