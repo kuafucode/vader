@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:vader/src/widgets/buttons.dart';
+import 'package:vader/src/flatbutton_widget.dart';
 
-class WidgetLibrary extends StatelessWidget {
+class Buttons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,32 +51,27 @@ class WidgetLibrary extends StatelessWidget {
                     child: Padding(
                         padding: EdgeInsets.all(12.0),
                         child: Text(
-                          "Widget Library",
+                          "Buttons",
                           style: TextStyle(fontSize: 24.0, color: Colors.white),
                         )),
                   ),
                   Padding(
-                      padding: EdgeInsets.fromLTRB(0.0, 8.0, 0.0, 8.0),
-                      child: Text("Select from available widgets",
-                          style: TextStyle(fontSize: 18.0))),
-                  Expanded(
-                    flex: 1,
-                    child: Container(
-                      child: GridView.count(
-                        primary: false,
-                        padding: const EdgeInsets.all(3.0),
-                        crossAxisSpacing: 10.0,
-                        crossAxisCount: 2,
-                        children: <Widget>[
-                          WidgetCard(text: 'App Structure and navigation', nav: null),
-                          WidgetCard(text: 'Buttons', nav: MaterialPageRoute(builder:(context)=> Buttons(), settings: RouteSettings(name: 'buttons'))),
-                          WidgetCard(text: 'Input and selections'),
-                          WidgetCard(text: 'Dialogs and panels'),
-                          WidgetCard(text: 'Information Displays'),
-                        ],
-                      ),
+                      padding: EdgeInsets.fromLTRB(0.0, 8.0, 0.0, 8.0),),
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 20.0),
+                    height: 200.0,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: <Widget>[
+
+                      WidgetCard(text: 'App Structure and navigation'),
+                      WidgetCard(text: 'Flat Button', nav: MaterialPageRoute(builder:(context)=> FlatbuttonWidget('a'), settings: RouteSettings(name: 'flatbutton'))),
+                      WidgetCard(text: 'Input and selections'),
+                      WidgetCard(text: 'Dialogs and panels'),
+                      WidgetCard(text: 'Information Displays'),
+                      ],
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
@@ -91,12 +86,13 @@ class WidgetCard extends StatelessWidget {
   WidgetCard({Key key, this.text, this.nav}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return GridTile(
+    return Container(
+      width: 200,
         child: InkWell(
           onTap: nav != null ?  (){
             Navigator.push(context, nav);
           } : null,
-                  child: Card(
+          child: Card(
               child: Center(
                   child: Padding(
                       padding: EdgeInsets.all(4.0),
